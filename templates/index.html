@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	{% block head %}
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Kirelite</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" href="{{ url_for('static',filename='favicon.ico') }}">
+		<meta name="author" content="Kirito" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/normalize.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/litebar.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/chat.css') }}" />
+	</head>
+	{% endblock head %}
+
+	{% block body %}
+	<body>
+
+		<div class="container">
+			<!-- Litebar -->
+			<div class="litebar-wrapper">
+				<nav class="litebar">
+					<div class="lite-apps">
+						<p id="title">Lites</p>
+						<button class="lite-wrapper" type="submit" name="lite{{litenum}}" value="{{litenum}}">
+							<svg class="lite" height="120" width="120">
+						 	<circle cx="60" cy="60" r="43" fill="var(--emotion)" />
+  				 		<circle cx="60" cy="60" r="50" stroke="var(--emotion)" stroke-width="4" fill="none"/></svg>
+						</button>
+						<button class="lite-wrapper" type="submit" name="lite{{litenum}}" value="{{litenum}}">
+							<svg class="lite" height="120" width="120">
+						 	<circle cx="60" cy="60" r="43" fill="var(--emotion)" />
+  				 		<circle cx="60" cy="60" r="50" stroke="var(--emotion)" stroke-width="4" fill="none"/></svg>
+						</button>
+						<button class="lite-wrapper" type="submit" name="lite{{litenum}}" value="{{litenum}}">
+							<svg class="lite" height="120" width="120">
+						 	<circle cx="60" cy="60" r="43" fill="var(--emotion)" />
+  				 		<circle cx="60" cy="60" r="50" stroke="var(--emotion)" stroke-width="4" fill="none"/></svg>
+						</button>
+					</div>
+				</nav>
+			</div>
+			<!-- Litebar Button -->
+			<button class="litebar-button" id="litebar-button"></button>
+			<div class="content-wrap">
+				<div class="content" id="content">
+					<!-- Background -->
+					<canvas id="brain"></canvas>
+					<!-- Logo Image -->
+					<img id="logo" src="{{ url_for('static',filename='img/logo.png') }}" alt="Kirelite">
+
+					<!-- Chat -->
+					<div class="chat-window">
+						<div class="chat-messages">
+							<ol class="chat-messages-list">
+								<li class="chat-message chat-message-friend">
+									<div class="chat-message-bubble">
+										Hey
+									</div>
+								</li>
+							</ol>
+						</div>
+						<div class="chat-input-bar">
+							<div class="chat-info-container">
+
+							</div>
+							<div class="chat-effect-container">
+								<div class="chat-effect-bar"></div>
+							</div>
+							<div class="chat-input-wrapper">
+								<div class="chat-input" contenteditable></div>
+								<button class="chat-send"><img id="send" src="{{ url_for('static',filename='img/send.svg') }}" alt="Invia" width="30px" height="30px" ></button>
+							</div>
+						</div>
+					</div>
+				<!--<div id="siric"></div>-->
+
+				</div>
+			</div>
+		</div>
+		<!-- Bubbles SVG -->
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" />
+				</filter>
+			</defs>
+		</svg>
+		<!-- Utilities -->
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/classie.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/TweenMax.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/EasePack.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/rAF.js') }}"></script>
+		<!-- Particle Background -->
+		<script src="{{ url_for('static',filename='js/background.js') }}"></script>
+		<!-- Chat Lite -->
+		<script src="{{ url_for('static',filename='js/chat.js') }}"></script>
+		<!-- SiriwaveJS -->
+		<script src="{{ url_for('static',filename='js/siriwave.js') }}"></script>
+		<!-- Main Scripts -->
+		<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	</body>
+	{% endblock body %}
+</html>

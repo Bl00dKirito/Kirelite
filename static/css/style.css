@@ -1,0 +1,119 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+:root {
+	--emotion: #02a7f4;
+	--main-color : rgba( 255, 255, 255, 0.9);
+	--emotion-alpha: rgba( 3, 169, 244, 0.7);
+}
+
+body {
+	background: var(--emotion);
+	color: var(--main-color);
+	font-weight: 200;
+	font-size: 1em;
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	color: var(--emotion);
+	text-decoration: none;
+	outline: none;
+}
+
+img {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+svg {
+	pointer-events: none;
+	-khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button {
+	position: absolute;
+	z-index: 1001;
+}
+
+a {
+	color: var(--emotion);
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #c94e50;
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+.content {
+	position: absolute;
+	display: block;
+}
+
+#title {
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#brain {
+	position: absolute;
+	display: block;
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#logo {
+	position: absolute;
+	display: block;
+	opacity: 0.9;
+	top: 15%;
+	left: 50%;
+	max-width: 100%;
+	height: auto;
+	padding: 20%;
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+#siric {
+  position: absolute;
+	display: block;
+	top: 60%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	z-index: 1001;
+}
+
+#sirwave {
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	z-index: 1001;
+}

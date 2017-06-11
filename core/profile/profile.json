@@ -1,0 +1,7 @@
+{
+  "name": "Kirito",
+  "gender": "male",
+  "stt": "google",
+  "tts": "espeak",
+  "path": "desktop"
+}
